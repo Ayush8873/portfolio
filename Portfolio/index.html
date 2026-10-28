@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayush Kumar · DevOps Engineer</title>
+  <meta name="description" content="Ayush Kumar is a DevOps Engineer (L2) at SegueIT building CI/CD pipelines, containerised deployments and monitored production infrastructure on AWS and Azure.">
+  <meta name="author" content="Ayush Kumar">
+  <meta name="theme-color" content="#0a0d12">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ayush Kumar · DevOps Engineer">
+  <meta property="og:description" content="CI/CD, containers and cloud infrastructure on AWS and Azure. Pipelines, deployments and monitoring for production applications.">
+  <!-- TODO: once deployed, add <link rel="canonical" href="https://YOUR-DOMAIN/"> and og:url / og:image -->
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ayush Kumar",
+    "jobTitle": "DevOps Engineer L2",
+    "worksFor": { "@type": "Organization", "name": "SegueIT" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Ghaziabad", "addressRegion": "UP", "addressCountry": "IN" },
+    "email": "mailto:kumarayush088@gmail.com",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Lovely Professional University" },
+    "sameAs": ["https://linkedin.com/in/ayush088", "https://github.com/Ayush8873"],
+    "knowsAbout": ["DevOps", "CI/CD", "GitHub Actions", "Docker", "AWS", "Azure", "NGINX", "Prometheus", "Grafana", "Linux"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Ayush Kumar, back to top">
+        <span class="brand-prompt">ayush@devops</span><span class="brand-path">:~$</span><span class="brand-cursor" aria-hidden="true"></span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle menu</span>
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#workflow">Workflow</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn btn-sm btn-ghost" href="assets/Ayush_Kumar_DevOps_Engineer_Resume.pdf" download>Résumé <span aria-hidden="true">↓</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot dot-live" aria-hidden="true"></span>DevOps Engineer L2 · SegueIT</p>
+          <h1 id="hero-title">I build the path from <code class="h1-code">git&nbsp;push</code> to production, and keep it running.</h1>
+          <p class="lede">
+            I'm <strong>Ayush Kumar</strong>, a DevOps engineer in Ghaziabad, India. I turn a <code>git push</code> into a tested,
+            versioned container running in production, and I make sure the team hears about it the moment something stops responding.
+            Pipelines, containers, cloud infrastructure and monitoring for client and in-house applications on
+            <strong>AWS</strong>, <strong>Azure</strong> and Linux servers.
+          </p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#projects">See my work</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+          <dl class="hero-facts">
+            <div><dt>Now</dt><dd>DevOps Engineer L2, SegueIT</dd></div>
+            <div><dt>Clouds</dt><dd>AWS · Azure</dd></div>
+            <div><dt>Based in</dt><dd>Ghaziabad, UP</dd></div>
+          </dl>
+        </div>
+
+        <figure class="terminal hero-terminal" aria-label="Illustration of a release going through my pipeline">
+          <div class="term-bar" aria-hidden="true">
+            <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+            <span class="term-title">release.log</span>
+          </div>
+          <div class="term-body" id="hero-term">
+            <p class="t-line t-cmd" data-type><span class="t-prompt">~/pharmacy-platform (main) $</span> git push origin main</p>
+            <p class="t-line"><span class="t-arrow">→</span> github-actions <span class="t-ok">lint ✓</span> <span class="t-ok">test ✓</span> <span class="t-ok">build ✓</span></p>
+            <p class="t-line"><span class="t-arrow">→</span> docker build <span class="t-dim">api, web</span> tag <span class="t-hl">sha-&lt;commit&gt;</span></p>
+            <p class="t-line"><span class="t-arrow">→</span> push <span class="t-hl">ECR</span> <span class="t-dim">· pulled via IAM role</span></p>
+            <p class="t-line"><span class="t-arrow">→</span> deploy <span class="t-dim">lock acquired · compose pull &amp;&amp; up -d</span></p>
+            <p class="t-line"><span class="t-arrow">→</span> verify <span class="t-dim">GET /health</span> <span class="t-ok">200</span> <span class="t-dim">· smoke tests</span> <span class="t-ok">✓</span></p>
+            <p class="t-line"><span class="t-arrow">→</span> nginx -t <span class="t-ok">ok</span> <span class="t-dim">· reload</span></p>
+            <p class="t-line t-done"><span class="t-ok">✓ release live</span> <span class="t-dim">· lock released · watching Grafana</span></p>
+            <p class="t-line t-cmd"><span class="t-prompt">~/pharmacy-platform (main) $</span> <span class="t-caret" aria-hidden="true"></span></p>
+          </div>
+        </figure>
+      </div>
+
+      <div class="container">
+        <ul class="tool-strip" aria-label="Core tools">
+          <li>GitHub Actions</li><li>Docker</li><li>Amazon ECR</li><li>EC2</li><li>Azure ACR</li>
+          <li>NGINX</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Uptime Kuma</li><li>AWS Organizations</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="section-kicker">01 / about</p>
+          <h2 id="about-title">Making releases boring, on purpose.</h2>
+          <p>
+            I joined <strong>SegueIT</strong> in January 2026 as a Junior DevOps Engineer and was promoted to
+            <strong>DevOps Engineer L2</strong> after probation in August 2026. Day to day I own the release path for a mix of
+            client and in-house applications: GitHub Actions pipelines, Docker images in Amazon ECR and Azure Container Registry,
+            deployments to EC2, Lightsail, Amplify and Azure, and NGINX as the front door.
+          </p>
+          <p>
+            The work I care about is the unglamorous part that makes production calm: images you can trace back to a commit,
+            servers without long-lived keys, health checks that test the real application, deployments that can't overlap, and
+            monitoring that tells you whether a problem sits in the host, the container or the code. I also handle system
+            administration for the company, manage client AWS accounts through AWS Organizations, and document everything I set up and change.
+          </p>
+        </div>
+
+        <aside class="principles reveal" aria-label="How I work">
+          <h3 class="mono-label">how I work</h3>
+          <ol>
+            <li><span class="p-key">trace</span><span>Every image is tagged with its Git commit SHA, so any release maps to its source.</span></li>
+            <li><span class="p-key">least-priv</span><span>EC2 pulls from ECR through a scoped IAM role. One OU per client in AWS Organizations.</span></li>
+            <li><span class="p-key">verify</span><span>Deploys check <code>/health</code> and run smoke tests, rather than trusting container status.</span></li>
+            <li><span class="p-key">observe</span><span>Metrics, logs and uptime checks, so incidents get narrowed down quickly.</span></li>
+            <li><span class="p-key">document</span><span>Everything I set up and change gets written down.</span></li>
+          </ol>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ WORKFLOW ============ -->
+    <section class="section section-alt" id="workflow" aria-labelledby="workflow-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">02 / workflow</p>
+          <h2 id="workflow-title">How code reaches production</h2>
+          <p class="section-sub">The delivery pipeline I run across projects. Select a stage to see what happens there and which tools I use.</p>
+        </div>
+
+        <div class="pipeline reveal" data-tabs>
+          <div class="pipe-track" role="tablist" aria-label="Pipeline stages">
+            <button class="pipe-stage" role="tab" id="tab-source" aria-controls="panel-source" aria-selected="true"><span class="ps-num">01</span><span class="ps-name">Source</span></button>
+            <button class="pipe-stage" role="tab" id="tab-ci" aria-controls="panel-ci" aria-selected="false" tabindex="-1"><span class="ps-num">02</span><span class="ps-name">CI</span></button>
+            <button class="pipe-stage" role="tab" id="tab-package" aria-controls="panel-package" aria-selected="false" tabindex="-1"><span class="ps-num">03</span><span class="ps-name">Package</span></button>
+            <button class="pipe-stage" role="tab" id="tab-registry" aria-controls="panel-registry" aria-selected="false" tabindex="-1"><span class="ps-num">04</span><span class="ps-name">Registry</span></button>
+            <button class="pipe-stage" role="tab" id="tab-deploy" aria-controls="panel-deploy" aria-selected="false" tabindex="-1"><span class="ps-num">05</span><span class="ps-name">Deploy</span></button>
+            <button class="pipe-stage" role="tab" id="tab-verify" aria-controls="panel-verify" aria-selected="false" tabindex="-1"><span class="ps-num">06</span><span class="ps-name">Verify</span></button>
+            <button class="pipe-stage" role="tab" id="tab-observe" aria-controls="panel-observe" aria-selected="false" tabindex="-1"><span class="ps-num">07</span><span class="ps-name">Observe</span></button>
+          </div>
+
+          <div class="pipe-panels">
+            <div class="pipe-panel" role="tabpanel" id="panel-source" aria-labelledby="tab-source">
+              <h3>Source</h3>
+              <p>Changes are pushed to GitHub and deployment workflows trigger from the approved branch. The pharmacy platform lives in a pnpm/Turborepo monorepo with a Next.js storefront and a NestJS API side by side.</p>
+              <ul class="chips"><li>Git</li><li>GitHub</li><li>pnpm / Turborepo</li></ul>
+            </div>
+            <div class="pipe-panel" role="tabpanel" id="panel-ci" aria-labelledby="tab-ci">
+              <h3>Continuous integration</h3>
+              <p>GitHub Actions runs lint, tests and the monorepo build before anything is packaged. Production deploys run on a self-hosted runner; static sites build on AWS Amplify with branch-based builds. I also built a GitLab CE + GitLab Runner pipeline as a proof of concept.</p>
+              <ul class="chips"><li>GitHub Actions</li><li>Self-hosted runners</li><li>AWS Amplify CI/CD</li><li>GitLab CI (POC)</li></ul>
+            </div>
+            <div class="pipe-panel" role="tabpanel" id="panel-package" aria-labelledby="tab-package">
+              <h3>Package</h3>
+              <p>Separate Docker images for the API and web app, each tagged with the Git commit SHA so a running container can always be traced back to the exact source it came from.</p>
+              <ul class="chips"><li>Docker</li><li>Docker Compose</li><li>Commit-SHA tags</li></ul>
+            </div>
+            <div class="pipe-panel" role="tabpanel" id="panel-registry" aria-labelledby="tab-registry">
+              <h3>Registry</h3>
+              <p>AWS workloads push to Amazon ECR; Azure workloads push to Azure Container Registry. EC2 authenticates to ECR through an IAM instance role scoped to the repositories it needs, which removed long-lived access keys from the servers.</p>
+              <ul class="chips"><li>Amazon ECR</li><li>Azure Container Registry</li><li>IAM instance roles</li></ul>
+            </div>
+            <div class="pipe-panel" role="tabpanel" id="panel-deploy" aria-labelledby="tab-deploy">
+              <h3>Deploy</h3>
+              <p>Targets vary by project: EC2 with Docker Compose behind NGINX, Azure, AWS Lightsail, AWS Amplify and cPanel-managed servers. Production deploys take a deployment lock so two releases can never overlap, and NGINX config is validated before every reload. The pharmacy platform releases blue/green: the new version is health-checked on the idle stack before NGINX switches traffic, and the previous stack stays ready for rollback.</p>
+              <ul class="chips"><li>EC2</li><li>Azure</li><li>Lightsail</li><li>Amplify</li><li>cPanel</li><li>Deployment lock</li><li>Blue/green</li><li>Rollback</li></ul>
+            </div>
+            <div class="pipe-panel" role="tabpanel" id="panel-verify" aria-labelledby="tab-verify">
+              <h3>Verify</h3>
+              <p>Deploy scripts hit the API and frontend <code>/health</code> endpoints and run smoke tests, and check container state, instead of relying on Docker's status alone. The lock is only released once the release is verified and reported.</p>
+              <ul class="chips"><li>/health checks</li><li>Smoke tests</li><li>Container state</li></ul>
+            </div>
+            <div class="pipe-panel" role="tabpanel" id="panel-observe" aria-labelledby="tab-observe">
+              <h3>Observe</h3>
+              <p>Node Exporter, cAdvisor and Promtail on the production server feed Prometheus, Loki, Grafana and Alertmanager on a separate monitoring server. Segue Monitor, our white-labelled Uptime Kuma, runs HTTP and keyword checks and posts down/up alerts to a Zoho Cliq channel. CloudWatch covers AWS resources, and I'm adding Zabbix.</p>
+              <ul class="chips"><li>Prometheus</li><li>Grafana</li><li>Loki / Promtail</li><li>Alertmanager</li><li>cAdvisor</li><li>Segue Monitor</li><li>Zoho Cliq alerts</li><li>CloudWatch</li><li>Zabbix (in progress)</li></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="arch-grid">
+          <!-- Request path -->
+          <figure class="arch-card reveal">
+            <figcaption>
+              <h3>Request path in production</h3>
+              <p>What sits between a user and the application.</p>
+            </figcaption>
+            <ol class="flow flow-v">
+              <li class="node"><span class="node-k">client</span><span class="node-v">Browser / Socket.IO client</span></li>
+              <li class="node"><span class="node-k">dns</span><span class="node-v">Domain → instance</span></li>
+              <li class="node node-accent">
+                <span class="node-k">nginx</span><span class="node-v">Single public entry point</span>
+                <ul class="node-list">
+                  <li>TLS 1.2 / 1.3, HTTPS redirect</li>
+                  <li>Rate limit 10 req/s with burst</li>
+                  <li>Security headers, sensitive paths blocked</li>
+                  <li>WebSocket upgrade for Socket.IO</li>
+                  <li>gzip, static caching</li>
+                </ul>
+              </li>
+              <li class="node"><span class="node-k">app</span><span class="node-v">Next.js web · NestJS API on localhost</span></li>
+              <li class="node"><span class="node-k">data</span><span class="node-v">RDS PostgreSQL · S3 + CloudFront</span></li>
+            </ol>
+          </figure>
+
+          <!-- AWS Organizations -->
+          <figure class="arch-card reveal">
+            <figcaption>
+              <h3>Client accounts on AWS</h3>
+              <p>Each client is isolated in its own organizational unit.</p>
+            </figcaption>
+            <div class="org-tree" role="img" aria-label="AWS Organizations root with one organizational unit per client, each holding that client's accounts">
+              <div class="org-root"><span class="node-k">aws organizations</span><span class="node-v">Management account</span></div>
+              <div class="org-children">
+                <div class="org-ou"><span class="node-k">ou</span><span class="node-v">Client A</span><span class="org-acct">accounts</span></div>
+                <div class="org-ou"><span class="node-k">ou</span><span class="node-v">Client B</span><span class="org-acct">accounts</span></div>
+                <div class="org-ou"><span class="node-k">ou</span><span class="node-v">Client …</span><span class="org-acct">accounts</span></div>
+              </div>
+            </div>
+            <p class="arch-note">Keeps access, resources and billing separate per client.</p>
+
+            <div class="env-split" role="img" aria-label="Test and production environments kept separate: each has its own database endpoint, credentials, GitHub environment and security groups">
+              <p class="mono-label">inside each workload</p>
+              <div class="env-row">
+                <div class="env env-test">
+                  <span class="node-k">test</span>
+                  <ul><li>own database endpoint</li><li>own credentials &amp; secrets</li><li>GitHub environment</li><li>security groups</li></ul>
+                </div>
+                <div class="env env-prod">
+                  <span class="node-k">production</span>
+                  <ul><li>own database endpoint</li><li>own credentials &amp; secrets</li><li>GitHub environment</li><li>restrictive security groups</li></ul>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">03 / projects</p>
+          <h2 id="projects-title">Selected work</h2>
+          <p class="section-sub">Client names are generalised. Status labels show exactly where each piece of work stands.</p>
+        </div>
+
+        <!-- Featured 1 -->
+        <article class="feature reveal" aria-labelledby="p-pharmacy">
+          <div class="feature-head">
+            <div>
+              <p class="feature-tag"><span class="status status-prod">Production</span><span class="status status-prod">Blue/green releases</span></p>
+              <h3 id="p-pharmacy">Pharmacy E-commerce Platform on AWS</h3>
+              <p class="feature-lede">Containerised release pipeline for a Next.js storefront and NestJS API, from monorepo commit to a verified deployment on EC2.</p>
+            </div>
+            <ul class="chips chips-sm" aria-label="Technologies"><li>GitHub Actions</li><li>Docker</li><li>ECR</li><li>EC2</li><li>NGINX</li><li>RDS</li><li>S3</li><li>CloudFront</li><li>CloudWatch</li></ul>
+          </div>
+
+          <ol class="flow flow-h" aria-label="Release flow">
+            <li class="node"><span class="node-k">commit</span><span class="node-v">monorepo</span></li>
+            <li class="node"><span class="node-k">ci</span><span class="node-v">lint · test · build</span></li>
+            <li class="node"><span class="node-k">image</span><span class="node-v">api + web · sha tag</span></li>
+            <li class="node"><span class="node-k">ecr</span><span class="node-v">IAM role pull</span></li>
+            <li class="node"><span class="node-k">ec2</span><span class="node-v">compose + nginx</span></li>
+            <li class="node node-accent"><span class="node-k">verify</span><span class="node-v">/health · smoke</span></li>
+          </ol>
+
+          <div class="feature-body">
+            <dl class="pdl">
+              <div><dt>Objective</dt><dd>Ship two services from one pnpm/Turborepo monorepo to AWS with repeatable, traceable releases and no manual steps on the server.</dd></div>
+              <div><dt>Approach</dt><dd>GitHub Actions runs lint, tests and the monorepo build, builds separate API and web images tagged with the commit SHA, and pushes them to ECR. EC2 pulls through an IAM instance role and restarts the stack behind NGINX. RDS PostgreSQL with Prisma migrations, S3 for files delivered through CloudFront, CloudWatch for EC2 and RDS metrics and logs.</dd></div>
+              <div><dt>Challenges</dt><dd>Knowing a release is really healthy, not just that a container started; keeping AWS keys off the server; separating test and production configuration; config changes that could break NGINX on reload.</dd></div>
+              <div><dt>Outcome</dt><dd>In production with blue/green releases: the new version is verified on <code>/health</code> for both services and smoke-tested before NGINX switches traffic, and the previous stack stays up for instant rollback. Containers run with restart policies, <code>nginx -t</code> runs before every reload, and every release maps to a commit.</dd></div>
+            </dl>
+            <div class="bg-diagram" role="img" aria-label="Blue/green release: new version starts on the idle stack, is health checked, then NGINX switches upstream while the previous stack is kept for rollback">
+              <p class="mono-label">blue/green release <span class="status status-prod">live</span></p>
+              <div class="bg-row">
+                <div class="bg-box bg-blue"><span>blue</span><small>current · kept for rollback</small></div>
+                <div class="bg-switch"><span>nginx upstream</span><span class="bg-arrow" aria-hidden="true">⇄</span></div>
+                <div class="bg-box bg-green"><span>green</span><small>new · health-checked first</small></div>
+              </div>
+              <ol class="bg-steps">
+                <li>Start the new version on the idle stack</li>
+                <li>Verify health</li>
+                <li>Switch NGINX upstream</li>
+                <li>Keep the previous stack for rollback</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Featured 2 -->
+        <article class="feature reveal" aria-labelledby="p-svms">
+          <div class="feature-head">
+            <div>
+              <p class="feature-tag"><span class="status status-prod">Production</span></p>
+              <h3 id="p-svms">Segue Visitor &amp; Staff Management System: Operations and Monitoring</h3>
+              <p class="feature-lede">A Dockerized REST and real-time backend shipped through GitHub Actions and ECR to EC2, behind NGINX, with locked deployments and a separate monitoring server watching it.</p>
+            </div>
+            <ul class="chips chips-sm" aria-label="Technologies"><li>GitHub Actions</li><li>Docker</li><li>ECR</li><li>EC2</li><li>NGINX</li><li>RDS</li><li>S3</li><li>Socket.IO</li><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Alertmanager</li></ul>
+          </div>
+
+          <ol class="flow flow-h" aria-label="Release flow">
+            <li class="node"><span class="node-k">trigger</span><span class="node-v">approved branch</span></li>
+            <li class="node"><span class="node-k">ci</span><span class="node-v">validate · build</span></li>
+            <li class="node"><span class="node-k">image</span><span class="node-v">docker → ECR</span></li>
+            <li class="node"><span class="node-k">runner</span><span class="node-v">take deploy lock</span></li>
+            <li class="node"><span class="node-k">ec2</span><span class="node-v">deploy · nginx</span></li>
+            <li class="node node-accent"><span class="node-k">verify</span><span class="node-v">health · release lock</span></li>
+          </ol>
+
+          <div class="obs-diagram" role="img" aria-label="Monitoring architecture: Node Exporter, cAdvisor and Promtail on the production server send metrics and logs to Prometheus and Loki on a separate monitoring server, where Grafana reads both and Prometheus alerts go to Alertmanager">
+            <div class="obs-col">
+              <p class="mono-label">production server</p>
+              <div class="node"><span class="node-k">host</span><span class="node-v">Node Exporter</span></div>
+              <div class="node"><span class="node-k">containers</span><span class="node-v">cAdvisor</span></div>
+              <div class="node"><span class="node-k">logs</span><span class="node-v">Promtail</span></div>
+            </div>
+            <div class="obs-col">
+              <p class="mono-label">monitoring server · store</p>
+              <div class="node node-tall"><span class="node-k">metrics</span><span class="node-v">Prometheus</span></div>
+              <div class="node"><span class="node-k">logs</span><span class="node-v">Loki</span></div>
+            </div>
+            <div class="obs-col">
+              <p class="mono-label">monitoring server · act</p>
+              <div class="node node-accent"><span class="node-k">dashboards</span><span class="node-v">Grafana</span></div>
+              <div class="node"><span class="node-k">alerts</span><span class="node-v">Alertmanager</span></div>
+            </div>
+          </div>
+
+          <div class="feature-body feature-body-1">
+            <dl class="pdl pdl-2">
+              <div><dt>Objective</dt><dd>Keep a production backend serving <code>/v1/</code> REST APIs and Socket.IO connections reliable, and make problems quick to locate.</dd></div>
+              <div><dt>Approach</dt><dd>GitHub Actions builds the Docker image and pushes it to ECR; a self-hosted runner on the server takes a deployment lock, deploys to EC2, verifies container state and health, then releases the lock and reports. RDS holds the data and S3 the files. NGINX handles TLS, <code>/v1/</code> routing, rate limiting (10 req/s with burst) and WebSocket upgrades with timeouts tuned for long-lived connections.</dd></div>
+              <div><dt>Challenges</dt><dd>Real-time connections dropping behind a proxy; overlapping deployments interfering with each other; telling host, container and application issues apart; keeping monitoring alive when the production server itself is in trouble.</dd></div>
+              <div><dt>Outcome</dt><dd>In production. Prometheus, Loki, Grafana and Alertmanager run on a separate monitoring server, so the dashboards stay up when production doesn't. Host, container and log telemetry sit in one Grafana view, with alert rules for target down, high CPU, low disk, memory pressure and container restarts.</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <!-- Grid -->
+        <div class="filter-bar reveal" role="toolbar" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter" data-filter="azure" aria-pressed="false">Azure</button>
+          <button class="filter" data-filter="aws" aria-pressed="false">AWS</button>
+          <button class="filter" data-filter="hosting" aria-pressed="false">Hosting</button>
+          <button class="filter" data-filter="security" aria-pressed="false">Security &amp; IAM</button>
+          <button class="filter" data-filter="poc" aria-pressed="false">POCs</button>
+        </div>
+
+        <div class="card-grid" id="project-grid">
+          <article class="card reveal" data-cat="azure">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">Azure</span></header>
+            <h3>Segue Monitor</h3>
+            <p class="card-sub">White-labelled Uptime Kuma</p>
+            <p>White-labelled Uptime Kuma into Segue Monitor, the company's own uptime service, built as a custom image in ACR and shipped to Azure through GitHub Actions. It runs HTTP and keyword checks on our production sites.</p>
+            <p class="card-note card-note-ok"><span class="mono-label">alerting</span> Down and recovery alerts post to a dedicated Zoho Cliq channel, with the status code and the reason the check failed.</p>
+            <ul class="chips chips-sm"><li>Azure</li><li>ACR</li><li>Docker</li><li>GitHub Actions</li><li>Uptime Kuma</li><li>Zoho Cliq</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="azure">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">Azure</span></header>
+            <h3>Transcriber</h3>
+            <p class="card-sub">Containerised application</p>
+            <p>Containerised the Transcriber application and deployed it on Azure through a GitHub Actions pipeline, with images in Azure Container Registry.</p>
+            <ul class="chips chips-sm"><li>Azure</li><li>ACR</li><li>Docker</li><li>GitHub Actions</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="azure">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">Azure</span></header>
+            <h3>Qlik-to-Fabric</h3>
+            <p class="card-sub">Application deployment</p>
+            <p>Deployed the Qlik-to-Fabric application on Azure through a GitHub Actions pipeline, with images in Azure Container Registry.</p>
+            <ul class="chips chips-sm"><li>Azure</li><li>ACR</li><li>Docker</li><li>GitHub Actions</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="azure">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">Azure</span></header>
+            <h3>Project Management System</h3>
+            <p class="card-sub">Application deployment</p>
+            <p>Deployed the Project Management System on Azure through a GitHub Actions pipeline, with images in Azure Container Registry.</p>
+            <ul class="chips chips-sm"><li>Azure</li><li>ACR</li><li>Docker</li><li>GitHub Actions</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="aws">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">AWS</span></header>
+            <h3>Makhana E-commerce Website</h3>
+            <p class="card-sub">Full-stack app on EC2</p>
+            <p>Deployed the Next.js + NestJS app from a pnpm/Turborepo monorepo on Ubuntu EC2. NGINX terminates TLS and proxies to the app on localhost, and PM2 keeps the processes running across crashes and reboots. Pointed the domain at the instance and worked through DNS, nameserver and NGINX virtual-host issues until the site served correctly.</p>
+            <p class="card-note"><span class="mono-label">challenge</span> The frontend build failed on backend Prisma config pulled in through a shared workspace reference. Traced the import and isolated the frontend build.</p>
+            <ul class="chips chips-sm"><li>EC2</li><li>Next.js</li><li>NestJS</li><li>Prisma</li><li>PM2</li><li>NGINX</li><li>DNS</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="aws">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">AWS</span></header>
+            <h3>SegueIT Company Website</h3>
+            <p class="card-sub">Containerised on Lightsail with CI/CD</p>
+            <p>Containerised the company website with Docker and deployed it on AWS Lightsail, with a GitHub Actions pipeline that ships every push.</p>
+            <ul class="chips chips-sm"><li>AWS Lightsail</li><li>Docker</li><li>GitHub Actions</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="aws">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">AWS</span></header>
+            <h3>Home Loan Advisory Website</h3>
+            <p class="card-sub">Amplify with branch builds</p>
+            <p>Deployed an Australian home loan advisory website on AWS Amplify with branch-based CI/CD builds and a custom domain.</p>
+            <ul class="chips chips-sm"><li>AWS Amplify</li><li>CI/CD</li><li>Custom domain</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="hosting">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">Linux</span></header>
+            <h3>Education Client Hosting</h3>
+            <p class="card-sub">Moodle LMS and website</p>
+            <p>Manage the client's servers through cPanel: deployed and maintain the open-source Moodle LMS on a dedicated server, and host their website on Linux enterprise shared hosting.</p>
+            <ul class="chips chips-sm"><li>cPanel</li><li>Moodle</li><li>Dedicated server</li><li>Shared hosting</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="aws security">
+            <header class="card-head"><span class="status status-prod">Production</span><span class="card-cloud">AWS</span></header>
+            <h3>AWS Security &amp; Backup Operations</h3>
+            <p class="card-sub">Recovery and least privilege</p>
+            <p>Automated RDS backups with 7-day retention, EC2 snapshots for server recovery, and an AWS Backup plan running daily at 02:00 Sydney time with 14-day retention. Cron jobs handle scheduled backup and maintenance tasks on the servers. Reviewed IAM policies to remove unnecessary permissions and kept credentials out of code and images.</p>
+            <ul class="chips chips-sm"><li>AWS Backup</li><li>RDS backups</li><li>EBS snapshots</li><li>Cron jobs</li><li>IAM</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="security poc">
+            <header class="card-head"><span class="status status-poc">POC · completed</span><span class="card-cloud">IAM</span></header>
+            <h3>Identity &amp; Access Management</h3>
+            <p class="card-sub">Authentik and Zoho Directory</p>
+            <p>Implemented an Authentik POC with Docker Compose and PostgreSQL to evaluate SSO for internal tools (users, groups, access policies, OIDC/SAML), and built a Zoho Directory POC for centralised user management and SSO.</p>
+            <ul class="chips chips-sm"><li>Authentik</li><li>Zoho Directory</li><li>OIDC</li><li>SAML</li><li>Docker Compose</li></ul>
+          </article>
+
+          <article class="card reveal" data-cat="poc">
+            <header class="card-head"><span class="status status-poc">POC · completed</span><span class="card-cloud">AWS</span></header>
+            <h3>GitLab CI/CD Pipeline</h3>
+            <p class="card-sub">Self-hosted GitLab on EC2</p>
+            <p>Installed GitLab CE and a self-hosted GitLab Runner on EC2. Built a build → test → deploy pipeline that builds a Docker image, checks HTTP status and page content, then deploys an NGINX container.</p>
+            <ul class="chips chips-sm"><li>GitLab CE</li><li>GitLab Runner</li><li>.gitlab-ci.yml</li><li>Docker</li><li>NGINX</li></ul>
+          </article>
+        </div>
+        <p class="grid-empty" id="grid-empty" hidden>No projects in this category.</p>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">04 / experience</p>
+          <h2 id="experience-title">Where I've worked</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-marker" aria-hidden="true"></div>
+            <div class="tl-card">
+              <header class="tl-head">
+                <h3>SegueIT</h3>
+                <p class="tl-meta">Ghaziabad, UP</p>
+              </header>
+              <ul class="tl-roles">
+                <li><span class="tl-role">DevOps Engineer L2 <span class="badge">Promoted</span></span><span class="tl-date">Aug 2026 – Present</span></li>
+                <li><span class="tl-role tl-role-past">Junior DevOps Engineer</span><span class="tl-date">Jan 2026 – Aug 2026</span></li>
+              </ul>
+              <ul class="tl-points">
+                <li>Own CI/CD, deployments and day-to-day operations for client and in-house applications on AWS, Azure and Linux servers.</li>
+                <li>Took 10+ applications to production across EC2, Lightsail, Amplify, Azure and cPanel hosting, most of them containerised and shipped through GitHub Actions.</li>
+                <li>Run client AWS accounts in AWS Organizations, plus backups, IAM and production monitoring.</li>
+                <li>Handle system administration for Linux and Windows servers.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-marker tl-marker-past" aria-hidden="true"></div>
+            <div class="tl-card">
+              <header class="tl-head">
+                <h3>TECH-A-INTERN</h3>
+                <p class="tl-meta">Remote</p>
+              </header>
+              <ul class="tl-roles">
+                <li><span class="tl-role tl-role-past">AWS Cloud Development Intern</span><span class="tl-date">Jan 2025 – Feb 2025</span></li>
+              </ul>
+              <ul class="tl-points">
+                <li>Provisioned EC2, IAM and an Elastic IP-backed WordPress site on AWS, and containerised app components with Docker.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-marker tl-marker-past" aria-hidden="true"></div>
+            <div class="tl-card">
+              <header class="tl-head">
+                <h3>Agumentik Software Pvt. Ltd.</h3>
+                <p class="tl-meta">Remote</p>
+              </header>
+              <ul class="tl-roles">
+                <li><span class="tl-role tl-role-past">Technical Business Development</span><span class="tl-date">Jan 2024 – May 2024</span></li>
+              </ul>
+              <ul class="tl-points">
+                <li>Generated leads, gathered client requirements, prepared proposals and presentations, and relayed client feedback to internal teams.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-marker tl-marker-edu" aria-hidden="true"></div>
+            <div class="tl-card">
+              <header class="tl-head">
+                <h3>Lovely Professional University</h3>
+                <p class="tl-meta">Punjab</p>
+              </header>
+              <ul class="tl-roles">
+                <li><span class="tl-role tl-role-past">B.Tech, Computer Science and Engineering</span><span class="tl-date">2019 – 2023</span></li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">05 / skills</p>
+          <h2 id="skills-title">Technical expertise</h2>
+          <p class="section-sub">Only what I've actually worked with.</p>
+        </div>
+
+        <div class="skill-grid">
+          <section class="skill-card reveal" aria-labelledby="sk-aws">
+            <h3 id="sk-aws"><span class="sk-icon" aria-hidden="true">▲</span>AWS</h3>
+            <ul class="chips"><li>Organizations (OUs)</li><li>EC2</li><li>ECS</li><li>ECR</li><li>CodeCommit</li><li>Lightsail</li><li>Amplify</li><li>CloudFront</li><li>CloudWatch</li><li>IAM</li><li>RDS PostgreSQL</li><li>S3</li><li>Elastic IP</li><li>AWS Backup</li><li>Security groups</li><li>Billing &amp; Cost Management</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-azure">
+            <h3 id="sk-azure"><span class="sk-icon" aria-hidden="true">◆</span>Azure</h3>
+            <ul class="chips"><li>Virtual Machines</li><li>Entra ID</li><li>Container Registry</li><li>App Service</li><li>Storage Accounts</li><li>VNets &amp; NSGs</li><li>Resource Groups</li><li>RBAC</li><li>Azure Monitor</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-cicd">
+            <h3 id="sk-cicd"><span class="sk-icon" aria-hidden="true">↻</span>CI/CD</h3>
+            <ul class="chips"><li>GitHub Actions</li><li>Self-hosted runners</li><li>Deployment environments</li><li>AWS Amplify CI/CD</li><li>GitLab CI/CD</li><li>GitLab Runner</li><li>Jenkins</li><li>Git</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-cont">
+            <h3 id="sk-cont"><span class="sk-icon" aria-hidden="true">▣</span>Containers &amp; releases</h3>
+            <ul class="chips"><li>Docker</li><li>Docker Compose</li><li>Image layering</li><li>Image optimisation</li><li>Image versioning</li><li>Health checks</li><li>Restart policies</li><li>Blue/green</li><li>Rollback</li><li>Smoke tests</li><li>Deployment locking</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-net">
+            <h3 id="sk-net"><span class="sk-icon" aria-hidden="true">⇆</span>Web &amp; networking</h3>
+            <ul class="chips"><li>NGINX</li><li>TLS termination</li><li>Rate limiting</li><li>WebSockets</li><li>gzip &amp; caching</li><li>DNS</li><li>SSL/TLS</li><li>TCP/IP</li><li>VPN</li><li>Load-balancing basics</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-obs">
+            <h3 id="sk-obs"><span class="sk-icon" aria-hidden="true">◉</span>Monitoring &amp; logging</h3>
+            <ul class="chips"><li>Prometheus</li><li>Grafana</li><li>Loki</li><li>Promtail</li><li>Alertmanager</li><li>Node Exporter</li><li>cAdvisor</li><li>Uptime Kuma</li><li>CloudWatch</li><li>Zabbix (in progress)</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-sys">
+            <h3 id="sk-sys"><span class="sk-icon" aria-hidden="true">$</span>Hosting &amp; systems</h3>
+            <ul class="chips"><li>Ubuntu Linux</li><li>PM2</li><li>cPanel</li><li>Dedicated &amp; shared hosting</li><li>Moodle</li><li>System hardening</li><li>Backups</li><li>Cron jobs</li><li>Windows Server</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-sec">
+            <h3 id="sk-sec"><span class="sk-icon" aria-hidden="true">⚿</span>Identity &amp; security</h3>
+            <ul class="chips"><li>IAM &amp; access control</li><li>Zero-trust concepts</li><li>SSO</li><li>OIDC</li><li>OAuth 2.0</li><li>SAML</li><li>Authentik</li><li>Zoho Directory</li><li>Secrets management</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-app">
+            <h3 id="sk-app"><span class="sk-icon" aria-hidden="true">{}</span>App stack (deploy side)</h3>
+            <ul class="chips"><li>Next.js</li><li>NestJS</li><li>Node.js</li><li>pnpm / Turborepo</li><li>Python</li><li>Prisma</li><li>PostgreSQL</li></ul>
+          </section>
+          <section class="skill-card reveal" aria-labelledby="sk-ai">
+            <h3 id="sk-ai"><span class="sk-icon" aria-hidden="true">✦</span>AI tools</h3>
+            <ul class="chips"><li>Claude Code</li><li>Claude Cowork</li><li>Claude connectors &amp; skills</li><li>Google Antigravity</li><li>ChatGPT</li></ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEARNING ============ -->
+    <section class="section section-alt" id="learning" aria-labelledby="learning-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="section-kicker">06 / learning</p>
+          <h2 id="learning-title">Learning &amp; achievements</h2>
+        </div>
+        <ul class="learn-grid">
+          <li class="learn-card learn-highlight reveal">
+            <span class="mono-label">achievement</span>
+            <h3>Promoted to DevOps Engineer L2</h3>
+            <p>SegueIT, August 2026, after probation as a Junior DevOps Engineer.</p>
+          </li>
+          <li class="learn-card reveal">
+            <span class="mono-label">certificate</span>
+            <h3>GUVI–HCL DevOps Fundamentals</h3>
+            <p>Certificate from the GUVI–HCL webinar on DevOps fundamentals.</p>
+          </li>
+          <li class="learn-card reveal">
+            <span class="mono-label">course</span>
+            <h3>AWS Educate: AWS Management Console</h3>
+            <p>AWS Educate course on working with the AWS Management Console.</p>
+          </li>
+          <li class="learn-card reveal">
+            <span class="mono-label">event</span>
+            <h3>AWS AWSome Day</h3>
+            <p>Attended the AWS AWSome Day online conference.</p>
+          </li>
+          <li class="learn-card reveal">
+            <span class="mono-label">courses</span>
+            <h3>AWS, Linux &amp; DevOps</h3>
+            <p>AWS and Linux courses on Udemy and Great Learning, the DevOps Bridge Course, and introductory AI training.</p>
+          </li>
+          <li class="learn-card reveal">
+            <span class="mono-label">community</span>
+            <h3>Volunteering</h3>
+            <p>Technical support for non-profits and college events.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="section-kicker">07 / contact</p>
+          <h2 id="contact-title">Have a pipeline to build or a platform to run?</h2>
+          <p class="section-sub">I'm happy to talk about DevOps roles, projects or anything in this portfolio.</p>
+
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:kumarayush088@gmail.com">Email me</a>
+            <button class="btn btn-ghost" type="button" id="copy-email" data-email="kumarayush088@gmail.com">
+              <span class="copy-label">Copy email</span>
+            </button>
+            <a class="btn btn-ghost" href="assets/Ayush_Kumar_DevOps_Engineer_Resume.pdf" download>Download résumé</a>
+          </div>
+          <p class="sr-only" role="status" aria-live="polite" id="copy-status"></p>
+
+          <ul class="contact-links">
+            <li><a href="mailto:kumarayush088@gmail.com"><span class="cl-k">email</span><span class="cl-v">kumarayush088@gmail.com</span></a></li>
+            <li><a href="https://linkedin.com/in/ayush088" target="_blank" rel="noopener"><span class="cl-k">linkedin</span><span class="cl-v">linkedin.com/in/ayush088</span></a></li>
+            <li><a href="https://github.com/Ayush8873" target="_blank" rel="noopener"><span class="cl-k">github</span><span class="cl-v">github.com/Ayush8873</span></a></li>
+            <li><span class="cl-static"><span class="cl-k">location</span><span class="cl-v">Ghaziabad, UP, India</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Ayush Kumar</p>
+      <p class="footer-mono">status: <span class="t-ok">all systems operational</span></p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
