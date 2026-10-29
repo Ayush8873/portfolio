@@ -1,0 +1,15 @@
+# python
+backend/.venv/
+__pycache__/
+*.pyc
+backend/data/messages.jsonl
+
+# node
+frontend/node_modules/
+frontend/.next/
+frontend/next-env.d.ts
+frontend/*.tsbuildinfo
+.env*.local
+
+# local tooling
+.claude/
