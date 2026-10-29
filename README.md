@@ -1,6 +1,6 @@
 # Ayush Kumar · Portfolio
 
-A DevOps portfolio that presents itself as a pipeline run. Each page section is a CI job: the sidebar (or the run bar on smaller screens) shows jobs going from queued to running to passed as you scroll, and the run is "deployed" when you reach the end. Light theme by default, with an animated switch to dark.
+A DevOps portfolio that presents itself as a pipeline run. Each page section is a CI job: the sidebar (or the run bar on smaller screens) shows jobs going from queued to running to passed as you scroll, and the run is "deployed" when you reach the end. Dark theme by default, with an animated switch to light.
 
 ```
 frontend/   Next.js 16 (App Router, TypeScript): all UI and content

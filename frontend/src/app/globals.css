@@ -1,7 +1,7 @@
 /* =========================================================
    Ayush Kumar · Portfolio
    tokens → base → chrome → sections → components → motion → responsive
-   Light is the default theme; [data-theme="dark"] overrides tokens only.
+   Dark is the default theme (set on <html>); [data-theme="dark"] overrides tokens only.
    ========================================================= */
 
 :root,

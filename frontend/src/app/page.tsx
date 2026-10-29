@@ -141,8 +141,7 @@ export default function Home() {
                     I build the path from <span className="hl">git&nbsp;push</span> to production, and keep it running.
                   </h1>
                   <p className="hero-lead">
-                    I&apos;m <strong>{profile.name}</strong>, a DevOps engineer in {profile.location_short.split(",")[0]}, India.{" "}
-                    {profile.intro}
+                    I&apos;m <strong>{profile.name}</strong>, {profile.intro}
                   </p>
                   <div className="hero-cta">
                     <a className="btn btn-primary" href="#projects">

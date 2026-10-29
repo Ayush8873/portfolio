@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 type Theme = "light" | "dark";
 
-/** Light is the default; the choice is remembered per browser. */
+/** Dark is the default; the choice is remembered per browser. */
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>("dark");
 
   // Follow the <html> attribute so every toggle on the page (sidebar, top bar) stays in sync.
   useEffect(() => {

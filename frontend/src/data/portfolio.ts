@@ -12,7 +12,7 @@ export const PORTFOLIO: PortfolioContent = {
     "linkedin": "https://linkedin.com/in/ayush088",
     "github": "https://github.com/Ayush8873",
     "headline": "I build the path from git push to production, and keep it running.",
-    "intro": "I turn a git push into a tested, versioned container running in production, and I make sure the team hears about it the moment something stops responding. Pipelines, containers, cloud infrastructure and monitoring for client and in-house applications on AWS, Azure and Linux servers.",
+    "intro": "a DevOps Engineer building the systems that turn code into reliable software. I design automated pipelines, engineer dependable cloud infrastructure, and implement proactive monitoring to help teams ship faster, minimize downtime, and operate with confidence.",
     "facts": [
       { "k": "Now", "v": "DevOps Engineer L2, SegueIT" },
       { "k": "Clouds", "v": "AWS · Azure" },
